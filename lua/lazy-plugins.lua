@@ -6,6 +6,8 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  require 'plugins.oil',
+
   require 'plugins.venv-selector',
 
   -- Git integration
@@ -23,7 +25,8 @@ require('lazy').setup({
   require 'plugins.conform',
 
   -- Autocompletion
-  require 'plugins.cmp',
+  -- require 'plugins.cmp',
+  require 'plugins.blink',
 
   -- Autopairs
   require 'plugins.autopairs',

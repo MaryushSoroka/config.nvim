@@ -6,6 +6,7 @@ return {
     overrides = {
       ['@lsp.typemod.function.defaultLibrary.lua'] = { fg = '#fe8019' },
       ['DiagnosticDeprecated'] = { undercurl = true, sp = '#fabd2f' },
+      ['FloatTitle'] = { link = 'NormalFloat' },
       -- ['DiagnosticDeprecated'] = { reverse = true, sp = '#fabd2f' },
     },
   },

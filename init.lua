@@ -5,6 +5,13 @@ https://learnxinyminutes.com/docs/lua/
 If you experience any errors, run `:checkhealth` for more info.
 --]]
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'c', 'cpp' },
+  callback = function()
+    vim.bo.commentstring = '// %s'
+  end,
+})
+
 -- Must happen before plugins are loaded (otherwise wrong leader will be used)
 -- See `:help mapleader`
 vim.g.mapleader = ' '
