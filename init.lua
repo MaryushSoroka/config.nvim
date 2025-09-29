@@ -28,6 +28,7 @@ vim.schedule(function()
 end)
 
 require 'autocmds'
+require 'cmds'
 
 -- [[ Plugins config ]]
 require 'lazy-bootstrap'
