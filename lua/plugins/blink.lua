@@ -35,6 +35,9 @@ return {
   --- @module 'blink.cmp'
   --- @type blink.cmp.Config
   opts = {
+    -- cmdline = {
+    --   enabled = false,
+    -- },
     keymap = {
       -- 'default' (recommended) for mappings similar to built-in completions
       --   <c-y> to accept ([y]es) the completion.
@@ -79,6 +82,12 @@ return {
       default = { 'lsp', 'path', 'snippets', 'lazydev' },
       providers = {
         lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+        cmdline = {
+          enabled = function()
+            -- ignores cmdline completions when executing shell commands in wsl
+            return not vim.fn.has 'wsl' or vim.fn.getcmdtype() ~= ':' or not vim.fn.getcmdline():match "^[%%0-9,'<>%-]*!"
+          end,
+        },
       },
     },
 
