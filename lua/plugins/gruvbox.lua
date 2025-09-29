@@ -9,12 +9,6 @@ return {
       ['FloatTitle'] = { link = 'NormalFloat' },
       -- ['DiagnosticDeprecated'] = { reverse = true, sp = '#fabd2f' },
     },
+    bold = false,
   },
-  -- config = function()
-  --   require('gruvbox').setup {
-  --     overrides = {
-  --       ['@lsp.typemod.function.defaultLibrary.lua'] = { fg = '#fe8019' },
-  --     },
-  --   }
-  -- end,
 }

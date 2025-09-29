@@ -35,8 +35,10 @@ require 'lazy-bootstrap'
 require 'lazy-plugins'
 
 -- [[ Select colorscheme ]]
+vim.o.termguicolors = true
 vim.o.background = 'dark'
-vim.cmd 'colorscheme gruvbox'
+-- vim.cmd.colorscheme 'gruvbox'
+vim.cmd.colorscheme 'gruvbox-material'
 
 -- local handler = {
 --   show = function(namespace, bufnr, diagnostics, opts)
